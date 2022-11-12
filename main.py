@@ -1,16 +1,28 @@
-# This is a sample Python script.
+import importlib
+from TK_1 import task1
+from TK_2 import task2
+from TK_3 import task3
+from TK_4 import task4
+sub = importlib.import_module('TK-5')
+def main(arr):
+    tk3 = arr
+    tk4 = arr
+    tk5 = arr
+    print("Calling first function from TK_1")
+    print(task1(10))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    print("Calling first function from TK_2")
+    print(task2(list))
 
+    print("Calling first function from TK_3")
+    print(task3(tk3))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print("Calling first function from TK-4")
+    print(task4(tk4))
 
+    print("Calling first function from TK-5")
+    print(sub.task5(tk5))
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    return 0
+list = [64, 1, 4, 65, 109, 5]
+main(list)
